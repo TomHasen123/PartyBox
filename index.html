@@ -70,12 +70,16 @@
                 document.write('></td></tr>');
             }
 
-            if (urlParams.get('abbr') !== '') {
-                document.write(`<tr><th>Abbreviation</th><td>${urlParams.get('abbr')}</td></tr>`);
+            if (urlParams.get('native-name') !== '') {
+                document.write(`<tr><th>Native Name</th><td>${urlParams.get('native-name')}</td></tr>`);
             }
 
             if (urlParams.get('chairperson') !== '') {
                 document.write(`<tr><th class="fakeLink">Chairperson</th><td class="fakeLink">${urlParams.get('chairperson')}</td></tr>`);
+            }
+
+             if (urlParams.get('honorary-president') !== '') {
+             document.write(`<tr><th class="fakeLink">Honorary President</th><td class="fakeLink">${urlParams.get('honorary-president')}</td></tr>`);
             }
 
             if (urlParams.get('founders') !== '') {
@@ -96,6 +100,11 @@
 
             if (urlParams.get('preceeded') !== '') {
                 document.write(`<tr><th>Preceeded by</th><td class="fakeLink">${urlParams.get('preceeded').replaceAll('\n', '<br>')}</td></tr>`);
+            }
+
+            
+             if (urlParams.get('alliance') !== '') {
+             document.write(`<tr><th class="fakeLink">Alliance</th><td class="fakeLink">${urlParams.get('alliance')}</td></tr>`);
             }
 
             if (urlParams.get('ideology') !== '') {
@@ -277,8 +286,8 @@
         <label for="field-fullWidth">full width</label>
         <br>
 
-        <label for="field-abbr">Abbreviation</label>
-        <input id="field-abbr" name="abbr" type="text"><br>
+        <label for="field-native-name">Native Name</label>
+        <input id="field-native-name" name="native-name" type="text"><br>
 
         <label for="field-slogan">Slogan</label>
         <input id="field-slogan" name="slogan" type="text"><br>
@@ -289,11 +298,18 @@
         <label for="field-chairperson">Chairperson</label>
         <input id="field-chairperson" name="chairperson" type="text"><br>
 
+        <label for="field-honorary-president">Honorary President</label>
+        <input id="field-honorary-president" name="honorary-president" type="text"><br>
+
         <label for="field-founded">Date Founded</label>
         <input id="field-founded" name="founded" type="text"><br>
 
         <label for="field-founders" style="vertical-align: top;">Founders</label>
         <textarea id="field-founders" name="founders" style="margin-top: 5px;"></textarea><br>
+
+        <label for="field-alliance" style="vertical-align: top;">Alliance</label>
+        <textarea id="field-alliance" name="alliance" style="margin-top: 5px;"></textarea><br>
+
 
 
         <h2>Colors</h2>
